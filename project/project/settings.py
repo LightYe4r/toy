@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%=z3i=u1t+qx-u&13u6(3^#)4rtf_^db+dc_(e3_le!i5xkbue
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://127.0.0.1:3000', 'http://localhost:3000', '0.0.0.0:8000', 'localhost:8000', '127.0.0.1']
+ALLOWED_HOSTS = ['http://127.0.0.1:3000', 'http://localhost:3000', '0.0.0.0:8000', 'localhost:8000', '127.0.0.1', 'https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/']
 
 
 # Application definition
@@ -53,15 +53,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:3000', 'http://0.0.0.0:8000', 'http://localhost:8000', 'http://127.0.0.1', 'http://localhost:8000', 'http://127.0.0.1']
+CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:3000', 'http://0.0.0.0:8000', 'http://localhost:8000', 'http://127.0.0.1', 'http://localhost:8000', 'http://127.0.0.1', 'https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/']
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
-'http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:3000', 'http://0.0.0.0:8000', 'http://localhost:8000', 'http://127.0.0.1', 'http://localhost:8000', 'http://127.0.0.1'
+'http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:3000', 'http://0.0.0.0:8000', 'http://localhost:8000', 'http://127.0.0.1', 'http://localhost:8000', 'http://127.0.0.1', 'https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-'http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:3000', 'http://0.0.0.0:8000', 'http://localhost:8000', 'http://127.0.0.1', 'http://localhost:8000', 'http://127.0.0.1'
+'http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:3000', 'http://0.0.0.0:8000', 'http://localhost:8000', 'http://127.0.0.1', 'http://localhost:8000', 'http://127.0.0.1', 'https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/'
 ]
 ROOT_URLCONF = 'project.urls'
 
