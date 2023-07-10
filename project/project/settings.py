@@ -53,10 +53,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/',
-                        'https://localhost:3000/',
-                        'https://127.0.0.1:8000/',
-                        ]
+# CORS_ALLOWED_ORIGINS = ['https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/',
+#                         'https://localhost:3000/',
+#                         'https://127.0.0.1:8000/',
+#                         ]
 CSRF_TRUSTED_ORIGINS = ['https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/']
 
 CORS_ORIGIN_WHITELIST = ['https://port-0-toy-k19y2kljwq5eju.sel4.cloudtype.app/',
