@@ -14,7 +14,6 @@ class Restaurant(models.Model):
     location_y = models.FloatField() #위도, latitude
     address = models.CharField(max_length=50, default='')
     
-
 class Menu(models.Model):
     name = models.CharField(max_length=30)
     price = models.IntegerField()
