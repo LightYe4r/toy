@@ -23,6 +23,13 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer = ReviewSerializer(reviews, many=True)
         return Response(serializer.data)
     
+    @action(detail=True, methods=['get'])
+    def user_reservations(self, request, pk):
+        user = self.get_object()
+        reservations = user.reservation_set.all()
+        serializer = ReservationSerializer(reservations, many=True)
+        return Response(serializer.data)
+    
 # class RestaurantViewSet(viewsets.ModelViewSet):
 #     queryset = Restaurant.objects.all()
 #     serializer_class = RestaurantSerializer
@@ -38,12 +45,19 @@ class RestaurantViewSet(viewsets.ModelViewSet):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
     
-    # @action(detail=True, methods=['get'])
-    # def restaurant_reviews(self, request, pk):
-    #     reviews = Review.objects.get(restaurant=pk)
-    #     serializer = ReviewSerializer(reviews, many=True)
-    #     return Response(serializer.data)
+    @action(detail=True, methods=['get'])
+    def restaurant_reviews(self, request, pk):
+        restaurant = self.get_object()
+        reviews = restaurant.review_set.all()
+        serializer = ReviewSerializer(reviews, many=True)
+        return Response(serializer.data)
     
+    @action(detail=True, methods=['get'])
+    def restaurant_menus(self, request, pk):
+        restaurant = self.get_object()
+        menus = restaurant.menu_set.all()
+        serializer = MenuSerializer(menus, many=True)
+        return Response(serializer.data)
     
 class MenuViewSet(viewsets.ModelViewSet):
     queryset = Menu.objects.all()
@@ -53,8 +67,8 @@ class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
     
-    filter_backends = [SearchFilter]
-    search_fields = ['restaurant__name']    
+    # filter_backends = [SearchFilter]
+    # search_fields = ['restaurant__name']    
 class ReservationViewSet(viewsets.ModelViewSet):
     queryset = Reservation.objects.all()
     serializer_class = ReservationSerializer
