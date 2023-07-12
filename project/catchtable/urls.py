@@ -14,4 +14,5 @@ routers.register('reservation', ReservationViewSet)
 urlpatterns = [
     path('', include(routers.urls)),
     path('rest-auth/', include('dj_rest_auth.urls')),
+    path('rest-auth/registration/', include('dj_rest_auth.registration.urls')),
 ]
