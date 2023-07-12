@@ -52,12 +52,15 @@ class User(AbstractBaseUser):
 
 class Restaurant(models.Model):
     restaurant_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=30)
+    restaurantname = models.CharField(max_length=30)
     address = models.CharField(max_length=50)
     open_hours = models.CharField(max_length=100)
     location_x = models.FloatField() #경도, longitude
     location_y = models.FloatField() #위도, latitude
     address = models.CharField(max_length=50, default='')
+    
+    def __str__(self):
+        return self.restaurantname
     
 class Menu(models.Model):
     menu_id = models.AutoField(primary_key=True)
